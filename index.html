@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yarım Hatırla — Şarkını Bul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+<div class="grain"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark"></div>
+      <span class="brand-name" data-i18n="siteName">Yarım Hatırla</span>
+    </div>
+    <div class="controls">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang="tr" class="active">TR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ru">RU</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☾</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow" data-i18n="eyebrow">o şarkı var ya...</span>
+    <h1>
+      <span class="blur-in i1" data-i18n="heroLine1">Adını unuttun,</span><br>
+      <span class="blur-in i2" data-i18n="heroLine2">ama <em data-i18n="heroEm">hissini</em> hatırlıyorsun.</span>
+    </h1>
+    <p class="subhead" data-i18n="heroSub">Tek bir dizeyi, hatta yanlış hatırladığın birkaç kelimeyi yaz. Genius'un devasa söz arşivinde arayalım.</p>
+
+    <div class="search-panel">
+      <label class="search-label" for="lyricInput" data-i18n="searchLabel">hatırladığın kadarını yaz</label>
+      <textarea id="lyricInput" data-i18n-placeholder="placeholder" placeholder="örneğin: you were looking so beautiful"></textarea>
+      <div class="search-row">
+        <span class="hint" data-i18n="hint">kelimeler eksik veya yanlış olabilir, sorun değil</span>
+        <button class="btn btn-primary" id="searchBtn" data-i18n="searchButton">Şarkımı bul</button>
+      </div>
+      <div class="backend-note" data-i18n="backendNote">
+        gerçek sonuçlar için backend'in çalışıyor olması gerekir: <code>python app.py</code> (bkz. backend/README.md)
+      </div>
+    </div>
+  </section>
+
+  <section id="results"></section>
+
+  <footer>
+    <span class="fline" data-i18n="footerLine">"Adını bilmiyorsan sorun değil, hatırladığın kadarı yeter."</span>
+    <span data-i18n="footerNote">arama sonuçları Genius'un söz arşivinden geliyor</span>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
